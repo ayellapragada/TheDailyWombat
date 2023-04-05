@@ -27,9 +27,6 @@ gem "stimulus-rails"
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "cssbundling-rails"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
-
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 
@@ -44,9 +41,6 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-
-# Use Sass to process CSS
-# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -69,7 +63,10 @@ end
 
 
 gem "stimulus_reflex", "= 3.5.0.rc2"
+gem "cable_ready", git: "git@github.com:stimulusreflex/cable_ready.git", ref: "aa31451"
 
 gem "action-cable-redis-backport", "~> 1"
 
 gem "redis-session-store", "~> 0.11.5"
+
+gem "clearance", "~> 2.6"
