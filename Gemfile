@@ -67,3 +67,9 @@ group :development do
   # gem "spring"
 end
 
+
+gem "stimulus_reflex", "= 3.5.0.rc2"
+
+gem "action-cable-redis-backport", "~> 1"
+
+gem "redis-session-store", "~> 0.11.5"
