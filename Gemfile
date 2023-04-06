@@ -45,9 +45,21 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+
+gem "stimulus_reflex", "= 3.5.0.rc2"
+
+gem "cable_ready", git: "git@github.com:stimulusreflex/cable_ready.git", ref: "aa31451"
+
+gem "action-cable-redis-backport", "~> 1"
+
+gem "redis-session-store", "~> 0.11.5"
+
+gem "clearance", "~> 2.6"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "rspec-rails", "~> 6.0.0"
 end
 
 group :development do
@@ -60,13 +72,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
-
-gem "stimulus_reflex", "= 3.5.0.rc2"
-gem "cable_ready", git: "git@github.com:stimulusreflex/cable_ready.git", ref: "aa31451"
-
-gem "action-cable-redis-backport", "~> 1"
-
-gem "redis-session-store", "~> 0.11.5"
-
-gem "clearance", "~> 2.6"
